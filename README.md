@@ -15,8 +15,8 @@ Az általam választott projekt az FHIR szabvány Media erőforrása, amelyet eg
 Az alábbi funkciók érhetőek el az alkalmazásban:
 
 - az orvosoknak be kell jelentkezniük, vendégként nem lehet belépni a rendszerbe
-- bejelentkezés után lehetőség van leletek megtekintésére, különböző szűrési feltételek alapján, ezt bármely orvos, ápoló megteheti
+- bejelentkezés után lehetőség van leletek megtekintésére, különböző szűrési feltételek alapján
 - különböző statisztikák is lekérhetőek a leletekről (legfrissebb leletek, legtöbb leletet készítő orvos, különböző formátumok darabszáma)
 - az orvosok az általuk készített leleteket felvihetik a rendszerbe
 - amennyiben valamely lelet adatait módosítani kellene, arra is van lehetőség
-- ha egy lelet feleslegessé válik (a páciens meggyógyul), azt törölni is lehet az adatbázisból (azonban ez jogosultsághoz kötött)
+- ha egy lelet feleslegessé válik (a páciens meggyógyul), azt törölni is lehet az adatbázisból
