@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/webfejl-fhir-media",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
