@@ -20,3 +20,9 @@ Az alábbi funkciók érhetőek el az alkalmazásban:
 - az orvosok az általuk készített leleteket felvihetik a rendszerbe
 - amennyiben valamely lelet adatait módosítani kellene, arra is van lehetőség
 - ha egy lelet feleslegessé válik (a páciens meggyógyul), azt törölni is lehet az adatbázisból
+
+## Publikus elérés
+
+Az alkalmazás az alábbi linken érhető el:
+<br>
+<a href="https://fhir-media.web.app/">Webfejl FHIR Media</a>
