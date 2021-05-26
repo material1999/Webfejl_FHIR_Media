@@ -1,14 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <a mat-button [routerLink]="[ '/home' ]">
+    <a mat-button [routerLink]="[ '/home' ]" appOnHover>
       FHIR_Media
     </a>
-    <button mat-button *ngFor="let item of categories" [routerLink]="[ item.url ]" routerLinkActive="active">
+    <button mat-button *ngFor="let item of categories" [routerLink]="[ item.url ]" routerLinkActive="active" appOnHover>
       {{item.title}}&nbsp;
       <mat-icon>{{item.icon}}</mat-icon>
     </button>
     <span style="flex: 1 1;"></span>
-    <button mat-button [matMenuTriggerFor]="menu">
+    <button mat-button [matMenuTriggerFor]="menu" appOnHover>
       {{loggedIn}}&nbsp;
       <mat-icon>arrow_drop_down</mat-icon>
     </button>

@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav.component';
+import { OnHoverModule } from './../../shared/directives/on-hover/on-hover.module';
 
 @NgModule({
   declarations: [NavComponent],
@@ -16,6 +17,7 @@ import { NavComponent } from './nav.component';
     MatMenuModule,
     MatIconModule,
     RouterModule,
+    OnHoverModule
   ],
   exports: [NavComponent],
 })
