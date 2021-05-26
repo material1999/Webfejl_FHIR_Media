@@ -6,20 +6,20 @@ export const CATEGORIES: Category[] = [
     icon: 'image',
     value: 'photo',
     color: 'cyan',
-    url: '/home',
+    url: '/home/photos',
   },
   {
     title: 'Videos',
     icon: 'movie',
     value: 'movie',
     color: 'teal',
-    url: '/home',
+    url: '/home/videos',
   },
   {
     title: 'Sounds',
     icon: 'music_note',
     value: 'sound',
     color: '#c2185b',
-    url: '/home',
+    url: '/home/sounds',
   },
 ];
