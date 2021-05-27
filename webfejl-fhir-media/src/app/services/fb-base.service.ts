@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class FbBaseService<T extends { id?: string }> {
+  collection: any;
+
   constructor(private afs: AngularFirestore) {}
 
   get(collectionName: string): Observable<T[]> {
@@ -27,6 +29,19 @@ export class FbBaseService<T extends { id?: string }> {
     data.id = uid;
     await this.afs.collection(collectionName).doc(uid).set(data);
     return uid;
+  }
+
+  async addAll(collectionName: string, data: T[], id?: string): Promise<void> {
+    await this.afs.collection(collectionName).get().toPromise().then(querySnapshot => {
+      if (querySnapshot.empty) {
+        console.log('No documents found');
+        data.forEach((element) => {
+          const uid = id ? id : this.afs.createId();
+          element.id = uid;
+          this.afs.collection(collectionName).doc(uid).set(element);
+        });
+      }
+    });
   }
 
   getById(collectionName: string, id: string): Observable<any> {

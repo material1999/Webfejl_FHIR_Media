@@ -1,5 +1,5 @@
 export interface Media {
-  id: string;
+  id?: string;
   identifier?: string[];
   basedOn?: string[];
   partOf?: string[];

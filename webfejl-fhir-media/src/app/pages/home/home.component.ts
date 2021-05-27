@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FbBaseService } from 'src/app/services/fb-base.service';
+import { Media } from 'src/app/shared/models/media.model';
 import { MEDIUM } from './../../shared/database/media.database';
 
 @Component({
@@ -9,7 +11,9 @@ import { MEDIUM } from './../../shared/database/media.database';
 export class HomeComponent implements OnInit {
   media = MEDIUM;
 
-  constructor() {}
+  constructor(private fbs: FbBaseService<Media>) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.fbs.addAll('media', this.media);
+  }
 }
