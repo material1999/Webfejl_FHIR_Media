@@ -1,0 +1,13 @@
+<mat-card *ngIf="photo" (click)="getPhoto.emit(photo)" appOnHover>
+    <mat-card-header>
+      <mat-card-title>{{photo.id}}<small *ngIf="photo.frames">({{photo.frames}}p)</small></mat-card-title>
+      <mat-card-subtitle>
+        <div>{{photo.status}}</div>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img *ngIf="photo.content" [src]="photo.content" alt="content">
+      <p>{{photo.frames}}</p>
+    </mat-card-content>
+  </mat-card>
+  

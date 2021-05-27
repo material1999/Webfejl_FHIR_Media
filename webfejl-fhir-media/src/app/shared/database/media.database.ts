@@ -2,6 +2,7 @@ import { Media } from '../models/media.model';
 
 export const MEDIUM: Media[] = [
   {
+    id: '1',
     identifier: ['1', '01'],
     status: 'completed',
     type: 'image',
