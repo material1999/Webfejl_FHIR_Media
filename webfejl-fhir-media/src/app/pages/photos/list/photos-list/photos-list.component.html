@@ -12,7 +12,7 @@
     </span>
   
     <ng-container *ngIf="pageState==='data'">
-      <app-photos-card class="item" *ngFor="let item of list" [photo]="item" (getPhoto)="onGetMovie($event)">
+      <app-photos-card class="item" *ngFor="let item of list | photo" [photo]="item" (getPhoto)="onGetPhoto($event)">
       </app-photos-card>
     </ng-container>
   </app-container>

@@ -11,7 +11,7 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class PhotosListComponent implements OnInit {
   title = 'Photos';
-  list: Media[] | null = null;
+  list: Media[] = [];
   getSub: Subscription | null = null;
   pageState = '';
 
@@ -38,7 +38,7 @@ export class PhotosListComponent implements OnInit {
       });
   }
 
-  onGetMovie(event: Media): void {
+  onGetPhoto(event: Media): void {
     this.router.navigateByUrl('/details/movie/' + event.id);
   }
 

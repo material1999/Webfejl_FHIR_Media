@@ -5,6 +5,8 @@ import { PhotosCardModule } from './../../card/photos-card/photos-card.module';
 import { PhotosListRoutingModule } from './photos-list-routing.module';
 import { ContainerModule } from './../../../../shared/components/container/container/container.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { PhotoModule } from 'src/app/shared/pipes/photo/photo.module';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     PhotosListRoutingModule,
     ContainerModule,
     MatProgressSpinnerModule,
-    PhotosCardModule
+    PhotosCardModule,
+    PhotoModule
   ]
 })
 export class PhotosListModule { }

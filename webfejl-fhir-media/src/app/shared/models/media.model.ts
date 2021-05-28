@@ -9,7 +9,7 @@ export interface Media {
   view?: string;
   subject?: string;
   encounter?: string;
-  createdDateTime?: Date;
+  createdDateTime?: number;
   createdPeriodStart?: Date;
   createdPeriodEnd?: Date;
   issued?: Date;
