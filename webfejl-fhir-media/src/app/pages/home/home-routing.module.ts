@@ -4,11 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'splash', pathMatch: 'full' },
   {
     path: '',
     component: HomeComponent,
     children: [
+      {
+        path: 'splash',
+        loadChildren: () =>
+          import('./../splash-screen/splash-screen.module').then(
+            (m) => m.SplashScreenModule
+          ),
+      },
       {
         path: 'photos',
         loadChildren: () =>

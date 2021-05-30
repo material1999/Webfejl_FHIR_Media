@@ -11,6 +11,8 @@ import { HomeComponent } from './home.component';
 import { NavModule } from './../nav/nav.module';
 import { ChangeMailComponent } from '../change-mail/change-mail.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { RouterModule } from '@angular/router';
+import { SplashScreenModule } from '../splash-screen/splash-screen.module';
 
 @NgModule({
   declarations: [HomeComponent, ChangeMailComponent],
@@ -24,7 +26,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule,
+    SplashScreenModule
   ],
   entryComponents: [ChangeMailComponent],
 })
