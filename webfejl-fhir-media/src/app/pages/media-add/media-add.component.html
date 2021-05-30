@@ -1,0 +1,35 @@
+<form [formGroup]="form">
+  <h3>Add media</h3>
+  <mat-form-field class="max-width">
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="type">
+      <mat-option value="image">Image</mat-option>
+      <mat-option value="video">Video</mat-option>
+      <mat-option value="audio">Audio</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Identifier</mat-label>
+    <input matInput placeholder="Identifier" focus formControlName="identifier" required>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Status</mat-label>
+    <input placeholder="Status" formControlName="status" matInput required>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Operator</mat-label>
+    <input placeholder="Operator" formControlName="operator" matInput>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Subject</mat-label>
+    <input placeholder="Subject" formControlName="subject" matInput>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Content link</mat-label>
+    <input placeholder="Content link" formControlName="content" matInput required>
+  </mat-form-field>
+  <div style="display: flex; justify-content: flex-end;">
+    <button mat-button (click)="dialogRef.close()" class="margin-right">Cancel</button>
+    <button mat-button [mat-dialog-close]="form.value" [disabled]="form.invalid">Add media</button>
+  </div>
+</form>

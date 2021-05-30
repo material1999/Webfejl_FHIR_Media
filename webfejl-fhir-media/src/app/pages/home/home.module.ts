@@ -13,9 +13,13 @@ import { ChangeMailComponent } from '../change-mail/change-mail.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
 import { SplashScreenModule } from '../splash-screen/splash-screen.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MediaAddComponent } from '../media-add/media-add.component';
+import { MatSelectModule } from '@angular/material/select';
+
 
 @NgModule({
-  declarations: [HomeComponent, ChangeMailComponent],
+  declarations: [HomeComponent, ChangeMailComponent, MediaAddComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -28,8 +32,10 @@ import { SplashScreenModule } from '../splash-screen/splash-screen.module';
     MatFormFieldModule,
     MatDialogModule,
     RouterModule,
-    SplashScreenModule
+    SplashScreenModule,
+    MatIconModule,
+    MatSelectModule
   ],
-  entryComponents: [ChangeMailComponent],
+  entryComponents: [ChangeMailComponent, MediaAddComponent],
 })
 export class HomeModule {}
