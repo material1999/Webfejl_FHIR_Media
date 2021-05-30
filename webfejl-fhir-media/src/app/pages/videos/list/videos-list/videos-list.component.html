@@ -1,1 +1,18 @@
-<p>videos-list works!</p>
+<app-container classes="container-1 flex">
+  <span class="centering" *ngIf="pageState===''">
+    Valami hiba történt!
+  </span>
+
+  <span class="centering" *ngIf="pageState==='loading'">
+    <mat-spinner></mat-spinner>
+  </span>
+
+  <span class="centering" *ngIf="pageState==='noData'">
+    Nincs adat.
+  </span>
+
+  <ng-container *ngIf="pageState==='data'">
+    <app-videos-card class="item" *ngFor="let item of list | video" [video]="item" (getVideo)="onGetVideo($event)">
+    </app-videos-card>
+  </ng-container>
+</app-container>

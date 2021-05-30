@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-photos-list',
   templateUrl: './photos-list.component.html',
-  styleUrls: ['./photos-list.component.scss']
+  styleUrls: ['./photos-list.component.scss'],
 })
 export class PhotosListComponent implements OnInit, OnDestroy {
   title = 'Photos';
@@ -15,7 +15,7 @@ export class PhotosListComponent implements OnInit, OnDestroy {
   getSub: Subscription | null = null;
   pageState = '';
 
-  constructor(private service: FbBaseService<Media>, private router: Router) { }
+  constructor(private service: FbBaseService<Media>, private router: Router) {}
 
   ngOnInit(): void {
     this.get();
@@ -30,7 +30,7 @@ export class PhotosListComponent implements OnInit, OnDestroy {
   get(): void {
     this.pageState = 'loading';
     this.getSub = this.service.get('media').subscribe(
-      result => {
+      (result) => {
         if (result?.length > 0) {
           this.list = result;
           this.pageState = 'data';
@@ -38,14 +38,14 @@ export class PhotosListComponent implements OnInit, OnDestroy {
           this.pageState = 'noData';
         }
       },
-      err => {
+      (err) => {
         console.log(err);
         this.pageState = '';
-      });
+      }
+    );
   }
 
   onGetPhoto(event: Media): void {
     this.router.navigateByUrl('/details/photo/' + event.id);
   }
-
 }

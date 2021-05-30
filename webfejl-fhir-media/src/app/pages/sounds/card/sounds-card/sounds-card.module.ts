@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PhotosCardComponent } from './photos-card.component';
+import { SoundsCardComponent } from './sounds-card.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [PhotosCardComponent],
+  declarations: [SoundsCardComponent],
   imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule],
-  exports: [PhotosCardComponent],
+  exports: [SoundsCardComponent],
 })
-export class PhotosCardModule {}
+export class SoundsCardModule {}

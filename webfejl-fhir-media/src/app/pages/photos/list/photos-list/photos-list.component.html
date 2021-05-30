@@ -1,18 +1,18 @@
 <app-container classes="container-1 flex">
-    <span class="centering" *ngIf="pageState===''">
-      Valami hiba történt!
-    </span>
-  
-    <span class="centering" *ngIf="pageState==='loading'">
-      <mat-spinner></mat-spinner>
-    </span>
-  
-    <span class="centering" *ngIf="pageState==='noData'">
-      Nincs adat.
-    </span>
-  
-    <ng-container *ngIf="pageState==='data'">
-      <app-photos-card class="item" *ngFor="let item of list | photo" [photo]="item" (getPhoto)="onGetPhoto($event)">
-      </app-photos-card>
-    </ng-container>
-  </app-container>
+  <span class="centering" *ngIf="pageState===''">
+    Valami hiba történt!
+  </span>
+
+  <span class="centering" *ngIf="pageState==='loading'">
+    <mat-spinner></mat-spinner>
+  </span>
+
+  <span class="centering" *ngIf="pageState==='noData'">
+    Nincs adat.
+  </span>
+
+  <ng-container *ngIf="pageState==='data'">
+    <app-photos-card class="item" *ngFor="let item of list | photo" [photo]="item" (getPhoto)="onGetPhoto($event)">
+    </app-photos-card>
+  </ng-container>
+</app-container>

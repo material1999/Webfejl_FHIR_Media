@@ -1,0 +1,17 @@
+<mat-card *ngIf="video" (click)="getVideo.emit(video)" appOnHover>
+  <mat-card-header>
+    <mat-card-title>{{video.identifier}} <small *ngIf="video.frames">({{video.status}})</small></mat-card-title>
+    <mat-card-subtitle>
+      <div>{{video.device}}</div>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <button mat-raised-button color="accent" (click)="openURL(video.content); $event.stopPropagation();">Open video</button>
+  </mat-card-content>
+  <mat-card-content>
+    <p>Subject: {{video.subject}}</p>
+    <p>Created by: {{video.operator}}</p>
+    <p>Created at: {{video.createdDateTime | date}}</p>
+  </mat-card-content>
+  <button mat-raised-button color="warn" (click)="deleteVideo(); $event.stopPropagation();">Delete</button>
+</mat-card>

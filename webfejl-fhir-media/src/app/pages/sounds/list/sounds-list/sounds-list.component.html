@@ -1,1 +1,18 @@
-<p>sounds-list works!</p>
+<app-container classes="container-1 flex">
+  <span class="centering" *ngIf="pageState===''">
+    Valami hiba történt!
+  </span>
+
+  <span class="centering" *ngIf="pageState==='loading'">
+    <mat-spinner></mat-spinner>
+  </span>
+
+  <span class="centering" *ngIf="pageState==='noData'">
+    Nincs adat.
+  </span>
+
+  <ng-container *ngIf="pageState==='data'">
+    <app-sounds-card class="item" *ngFor="let item of list | audio" [sound]="item" (getSound)="onGetSound($event)">
+    </app-sounds-card>
+  </ng-container>
+</app-container>

@@ -7,8 +7,6 @@ import { ContainerModule } from './../../../../shared/components/container/conta
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PhotoModule } from 'src/app/shared/pipes/photo/photo.module';
 
-
-
 @NgModule({
   declarations: [
     PhotosListComponent

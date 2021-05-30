@@ -105,7 +105,7 @@ export const MEDIUM: Media[] = [
     width: 720,
     frames: 3870,
     duration: 129,
-    content: "https://www.youtube.com/watch?v=QjEyjmNkN3k&ab_channel=PandemicArchivePandemicArchive",
+    content: "https://www.youtube.com/watch?v=QjEyjmNkN3k&t=1s&ab_channel=PandemicArchive",
     bodySite: "hearth"
   },
   {

@@ -1,0 +1,15 @@
+<mat-card *ngIf="sound" (click)="getSound.emit(sound)" appOnHover>
+  <mat-card-header>
+    <mat-card-title>{{sound.identifier}} <small *ngIf="sound.frames">({{sound.status}})</small></mat-card-title>
+    <mat-card-subtitle>
+      <div>{{sound.device}}</div>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img *ngIf="sound.content" [src]="sound.content" alt="content">
+    <p>Subject: {{sound.subject}}</p>
+    <p>Created by: {{sound.operator}}</p>
+    <p>Created at: {{sound.createdDateTime | date}}</p>
+  </mat-card-content>
+  <button mat-raised-button color="warn" (click)="deleteSound(); $event.stopPropagation();">Delete</button>
+</mat-card>
