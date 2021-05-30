@@ -1,4 +1,4 @@
-<mat-card *ngIf="video" (click)="getVideo.emit(video)" appOnHover>
+<mat-card *ngIf="video" appOnHover>
   <mat-card-header>
     <mat-card-title>{{video.identifier}} <small *ngIf="video.status">({{video.status}})</small></mat-card-title>
     <mat-card-subtitle>

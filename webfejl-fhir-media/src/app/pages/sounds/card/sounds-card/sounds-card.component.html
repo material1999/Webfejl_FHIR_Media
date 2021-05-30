@@ -1,4 +1,4 @@
-<mat-card *ngIf="sound" (click)="getSound.emit(sound)" appOnHover>
+<mat-card *ngIf="sound" appOnHover>
   <mat-card-header>
     <mat-card-title>{{sound.identifier}} <small *ngIf="sound.status">({{sound.status}})</small></mat-card-title>
     <mat-card-subtitle>

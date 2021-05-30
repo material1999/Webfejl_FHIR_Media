@@ -1,4 +1,4 @@
-<mat-card *ngIf="photo" (click)="getPhoto.emit(photo)" appOnHover>
+<mat-card *ngIf="photo" appOnHover>
   <mat-card-header>
     <mat-card-title>{{photo.identifier}} <small *ngIf="photo.status">({{photo.status}})</small></mat-card-title>
     <mat-card-subtitle>
