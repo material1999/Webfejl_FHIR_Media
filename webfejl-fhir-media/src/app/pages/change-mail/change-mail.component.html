@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+  <h3>Change email</h3>
+  <mat-form-field class="max-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder={{loggedIn}} focus formControlName="email">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>New email</mat-label>
+    <input matInput placeholder="New email" focus formControlName="newEmail">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Password</mat-label>
+    <textarea placeholder="Password" formControlName="password" matInput></textarea>
+  </mat-form-field>
+  <div style="display: flex; justify-content: flex-end;">
+    <button mat-button (click)="dialogRef.close()" class="margin-right">Cancel</button>
+    <button mat-button [mat-dialog-close]="form.value" [disabled]="form.invalid">Change email</button>
+  </div>
+</form>

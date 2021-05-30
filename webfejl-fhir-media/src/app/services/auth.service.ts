@@ -37,6 +37,14 @@ export class AuthService {
       });
   }
 
+  changeMail(email: string, newEmail: string, password: string): Promise<any> {
+    return this.afAuth
+      .signInWithEmailAndPassword(email, password)
+      .then(function (userCredential: any) {
+        userCredential.user.updateEmail(newEmail);
+      });
+  }
+
   navTo(url: string): void {
     this.router.navigateByUrl(url);
   }

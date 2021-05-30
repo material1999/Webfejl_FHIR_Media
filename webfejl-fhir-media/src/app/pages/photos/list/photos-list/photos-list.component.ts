@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { FbBaseService } from 'src/app/services/fb-base.service';
 import { Media } from 'src/app/shared/models/media.model';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-photos-list',
   templateUrl: './photos-list.component.html',
   styleUrls: ['./photos-list.component.scss']
 })
-export class PhotosListComponent implements OnInit {
+export class PhotosListComponent implements OnInit, OnDestroy {
   title = 'Photos';
   list: Media[] = [];
   getSub: Subscription | null = null;
@@ -19,6 +19,12 @@ export class PhotosListComponent implements OnInit {
 
   ngOnInit(): void {
     this.get();
+  }
+
+  ngOnDestroy(): void {
+    if (this.getSub) {
+      this.getSub.unsubscribe();
+    }
   }
 
   get(): void {
@@ -39,7 +45,7 @@ export class PhotosListComponent implements OnInit {
   }
 
   onGetPhoto(event: Media): void {
-    this.router.navigateByUrl('/details/movie/' + event.id);
+    this.router.navigateByUrl('/details/photo/' + event.id);
   }
 
 }

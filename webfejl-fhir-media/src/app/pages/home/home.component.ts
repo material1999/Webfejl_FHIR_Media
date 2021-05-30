@@ -16,4 +16,5 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.fbs.addAll('media', this.media);
   }
+
 }
