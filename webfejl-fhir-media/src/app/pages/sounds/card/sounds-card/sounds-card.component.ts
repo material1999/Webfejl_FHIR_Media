@@ -18,4 +18,8 @@ export class SoundsCardComponent implements OnInit {
   deleteSound(): void {
     this.fbs.delete('media', this.sound.id as any);
   }
+
+  openURL(url: string): void {
+    window.open(url);
+  }
 }

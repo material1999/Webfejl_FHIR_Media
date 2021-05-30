@@ -118,7 +118,7 @@ export const MEDIUM: Media[] = [
     operator: 'Dr. Stone',
     device: "Samsung Galaxy S10",
     duration: 214,
-    content: "https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT",
+    content: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO",
     bodySite: "stomach"
   }
 ];
