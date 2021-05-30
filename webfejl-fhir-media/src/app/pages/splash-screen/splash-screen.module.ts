@@ -5,8 +5,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { ContainerModule } from './../../shared/components/container/container/container.module';
-
-
+import { OnHoverModule } from 'src/app/shared/directives/on-hover/on-hover.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,8 @@ import { ContainerModule } from './../../shared/components/container/container/c
     MatRippleModule,
     MatCardModule,
     RouterModule,
-    ContainerModule
+    ContainerModule,
+    OnHoverModule
   ],
   exports: [SplashScreenComponent]
 })
