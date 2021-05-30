@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+  <h3>Registration</h3>
+  <mat-form-field class="max-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="email" focus formControlName="email">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Password</mat-label>
+    <textarea placeholder="password" formControlName="password" matInput></textarea>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Password again</mat-label>
+    <textarea placeholder="password again" formControlName="passwordAgain" matInput></textarea>
+  </mat-form-field>
+  <div style="display: flex; justify-content: flex-end;">
+    <button mat-button (click)="dialogRef.close()" class="margin-right">Cancel</button>
+    <button mat-button [mat-dialog-close]="form.value" [disabled]="form.invalid">Register</button>
+  </div>
+</form>

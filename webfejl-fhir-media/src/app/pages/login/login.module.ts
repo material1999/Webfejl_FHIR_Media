@@ -8,9 +8,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
+import { RegistrationComponent } from '../registration/registration.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, RegistrationComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -20,6 +22,9 @@ import { LoginComponent } from './login.component';
     MatInputModule,
     MatFormFieldModule,
     LoginRoutingModule,
+    MatDialogModule
   ],
+  entryComponents: [RegistrationComponent],
+  exports: [LoginComponent]
 })
 export class LoginModule {}
