@@ -18,7 +18,7 @@ export class FbBaseService<T extends { id?: string }> {
     return this.afs
       .collection(collectionName, (ref) => {
         let query: CollectionReference | Query = ref;
-        query = query.orderBy('id', 'asc');
+        query = query.orderBy('identifier', 'asc').limit(5);
         return query;
       })
       .valueChanges() as Observable<T[]>;

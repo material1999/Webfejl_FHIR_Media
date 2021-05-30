@@ -11,5 +11,6 @@
       <p>Created by: {{photo.operator}}</p>
       <p>Created at: {{photo.createdDateTime | date}}</p>
     </mat-card-content>
+    <button mat-raised-button color="warn" (click)="deleteImage(); $event.stopPropagation();">Delete</button>
   </mat-card>
   
